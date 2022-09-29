@@ -1,0 +1,326 @@
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2vw;
+    font-weight: 400;
+    min-width: 16em;
+    overflow-x: hidden;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    width: 100%;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    /*margin-top: 2em;
+    margin-bottom: 2em;*/
+    background-color: white;
+}
+
+footer {
+    background-color: rgba(30, 146, 223, 0.75);
+    height: 6em;
+    bottom: 0;
+    left: 0;
+    margin-top: 3em;
+    color: white;
+
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+main {
+    max-width: 48em;
+    width: 80%;
+    margin: 0 auto;
+    /*margin-top: 2em;*/
+    margin-bottom: 2em;
+    text-align: justify;
+}
+
+content {
+    margin-left: 1em;
+    margin-right: 1em;
+    display: block;
+}
+
+.smaller {
+    font-size: 0.9em;
+}
+
+div {
+    display: block;
+}
+
+p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#contact_info {
+    height: 8em;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.75);
+    background: radial-gradient(rgba(255, 255, 255, 0), rgb(234, 247, 255));
+    text-decoration: none;
+    /*white-space: nowrap;*/
+
+    cursor: pointer;
+
+    /*box-shadow: 5px 5px 8px 1px rgba(00,00,00,0.2);*/
+    /*text-shadow: 2px 2px 2px rgba(00,00,00,0.2);*/
+    /*filter: drop-shadow(.1em .1em .1em rgba(00,00,00,0.2));*/
+
+    transition: filter .5s, transform .5s;
+    display: inline-block;
+    background: transparent;
+}
+
+a.button {
+    border-radius: .2em;
+    padding: .2em;
+    /*border-color: rgba(30, 146, 223, 0.75);*/
+    background: radial-gradient(rgba(255, 255, 255, 0), rgba(30, 146, 223, 0.1));
+    border: 1px solid rgba(30, 146, 223, 0.5);
+    padding-left: 1em;
+    padding-right: 1em;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+a:hover {
+    color: rgba(30, 146, 223, 0.75);
+    text-decoration: underline;
+    background: transparent;
+
+    text-shadow: none;
+    box-shadow: none;
+    filter: drop-shadow(.1em .1em .1em rgba(00, 00, 00, 0.2));
+    transition: all 0.5s;
+    /*надо убрать изменение размера*/
+    transform: translateY(-.06em);
+}
+
+a[href*="https://www.linkedin.com"]::after {
+    background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_LinkedIn.svg);
+}
+
+a[href*="https://github.com"]::after {
+    background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_GitHub.svg);
+}
+
+a[href*="https://hh.ru"]::after {
+    background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_hh.svg);
+}
+
+a[href*="mailto:"]::after {
+    background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_mail.svg);
+}
+
+a[href*="https://git.miem.hse.ru"]::after {
+    background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_gitlab.svg);
+}
+
+a[href*="https://t.me"]::after {
+    background-image: url(https://raw.githubusercontent.com/ISPlatonov/CV/master/images/icons/link_Telegram.svg);
+}
+
+hl {
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    display: block;
+    border-bottom: solid .1em rgb(69, 115, 139);
+}
+
+h {
+    font-size: 1.1em;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 1em;
+    ;
+}
+
+li {
+    margin-bottom: 0.2em;
+}
+
+/*
+ul.sharp li::before {
+    content: "#";
+    margin-right: 1em;
+}
+
+ul.slash li::before {
+    content: "//";
+    margin-right: 1em;
+}
+
+ul.round li::before {
+    content: "•";
+    margin-right: 1em;
+}
+
+ul.arrow li::before {
+    content: ">";
+    margin-right: 1em;
+}
+*/
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid>div {
+    /*height: 5em;
+    /*background: rgba(30, 146, 223, 0.75);*/
+    text-align: center;
+    vertical-align: middle;
+    /*border-radius: .2em;
+    /*padding: .2em;*/
+    /*border-color: rgba(30, 146, 223, 0.75);
+    border: 1px solid;*/
+    /*padding-left: 1em;
+    padding-right: 1em;*/
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+.card>* {
+    padding: .2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.card>table {
+    border-top: 1px solid #dee2e6!important;
+}
+
+td:first-child {
+    text-align: right;
+    color: #6b7c93;
+    padding-right: 0.5rem;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+td:last-child {
+    text-align: left;
+}
+
+@media screen and (max-width: 49em) {
+    body {
+        font-size: 80%;
+    }
+
+    main {
+        width: 80%;
+    }
+}
+
+::-webkit-scrollbar {
+    height: .7em;
+    width: .7em;
+    background: transparent;
+    z-index: auto;
+    overflow: visible;
+}
+
+::-webkit-scrollbar-thumb {
+    width: .7em;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: auto;
+    border: .17em solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    /*transition: background-color .32s ease-in-out;*/
+    margin: .17em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: .7em;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: auto;
+    border: .1em solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    /*transition: background-color .32s ease-in-out;*/
+    margin: .1em;
+}
+
+::-webkit-scrollbar-thumb:hover:active {
+    width: .7em;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: auto;
+    border: .1em solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    /*transition: background-color .32s ease-in-out;*/
+    margin: .1em;
+}
+
+:root {
+    --blue: #3fa6e7;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffbe00;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #8494a0;
+    --gray-dark: #343a40;
+    --blue-dark: #0050a0;
+    --blue-light: #b3eaff;
+    --primary: #3fa6e7;
+    --secondary: #6b7c93;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffbe00;
+    --danger: #dc3545;
+    --light: #f6f9fc;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
