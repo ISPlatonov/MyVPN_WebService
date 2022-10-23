@@ -13,7 +13,7 @@ body {
     font-weight: 400;
     min-width: 16em;
     overflow-x: hidden;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     width: 100%;
     color: #000;
     -webkit-font-smoothing: antialiased;
@@ -76,7 +76,7 @@ p {
 }
 
 a {
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(30, 146, 223, 0.5);
     background: radial-gradient(rgba(255, 255, 255, 0), rgb(234, 247, 255));
     text-decoration: none;
     /*white-space: nowrap;*/
@@ -95,13 +95,15 @@ a {
 a.button {
     border-radius: .2em;
     padding: .2em;
+    color: rgba(0, 0, 0, 0.75);
     /*border-color: rgba(30, 146, 223, 0.75);*/
     background: radial-gradient(rgba(255, 255, 255, 0), rgba(30, 146, 223, 0.1));
     border: 1px solid rgba(30, 146, 223, 0.5);
     padding-left: 1em;
     padding-right: 1em;
     text-transform: uppercase;
-    font-size: .8em;
+    font-size: .9em;
+    margin-bottom: .5em;
 }
 
 a:hover {
@@ -167,6 +169,10 @@ li {
     margin-bottom: 0.2em;
 }
 
+iframe {
+    border: none;
+}
+
 /*
 ul.sharp li::before {
     content: "#";
@@ -191,8 +197,9 @@ ul.arrow li::before {
 
 .grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    margin-bottom: 2em;
 }
 
 .grid>div {
@@ -216,7 +223,8 @@ ul.arrow li::before {
     word-wrap: break-word;
     background-clip: border-box;
     border: 1px solid #dee2e6;
-    border-radius: .25rem;
+    border-radius: .25em;
+    justify-content: center;
 }
 
 .card>* {
@@ -226,19 +234,77 @@ ul.arrow li::before {
 }
 
 .card>table {
-    border-top: 1px solid #dee2e6!important;
+    border-top: 1px solid #dee2e6 !important;
 }
 
 td:first-child {
     text-align: right;
     color: #6b7c93;
-    padding-right: 0.5rem;
+    padding-right: 0.5em;
     vertical-align: top;
     white-space: nowrap;
 }
 
 td:last-child {
     text-align: left;
+}
+
+.slider {
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides>div {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 100%;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #dee2e6;
+    border-radius: .25em;
+    align-items: center;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+.slides>div.one {
+    width: 20em;
+}
+
+/* Optional styling */
+summary::-webkit-details-marker {
+    color: blue;
+}
+
+summary:focus {
+    outline-style: none;
+}
+
+input {
+    border: 1px solid #dee2e6;
+    border-radius: .25em;
+    padding: .5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+center {
+    align-content: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 49em) {
@@ -321,6 +387,6 @@ td:last-child {
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
