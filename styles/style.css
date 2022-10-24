@@ -219,6 +219,7 @@ ul.arrow li::before {
     grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
     margin-bottom: 2em;
     margin-top: 2em;
+    row-gap: 2em;
 }
 
 .grid>div {
