@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="700px" height="300px" preserveAspectRatio="xMidYMid meet">
     <polyline points="103,283 146,112 43,205 130,76 50,61 239,21" fill="#6b7c93" stroke="rgb(69, 115, 139)"/>
-    <text textLength="459.7" font-size="90.1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'" x="197.1" y="219.4" fill="rgba(0, 0, 0, 0.75)">
+    <text textLength="459.7" font-size="90.1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'" x="197.1" y="219.4" fill="rgba(255, 255, 255)">
         Hiddy Search
     </text>
 </svg>
