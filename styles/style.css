@@ -110,14 +110,14 @@ a {
 
 a.button {
     border-radius: .2em;
-    padding: .2em;
+    padding: .4em;
     color: var(--link-color);
     background: var(--button-background);
     border: 1px solid var(--button-border-color);
     padding-left: 1em;
     padding-right: 1em;
     text-transform: uppercase;
-    font-size: .9em;
+    font-size: 1em;
     margin-bottom: .5em;
 }
 
@@ -225,6 +225,11 @@ ul.arrow li::before {
 .grid>div {
     text-align: center;
     vertical-align: middle;
+}
+
+.grid>div>img {
+    width: 40%;
+    object-fit: scale-down;
 }
 
 .card {
