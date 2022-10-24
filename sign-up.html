@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiddy Search - Log in</title>
+    <title>Hiddy Search - Sign up</title>
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/ISPlatonov/MyVPN_WebService/master/images/logo_no_text.svg"
         type="image/png">
     <link rel="stylesheet" href="styles/style.css">
@@ -31,28 +31,31 @@
 
             <div>
                 <p>
-                    <a class="button" href="sign-up.html">Sign up</a>
+                    <a class="button" href="log-in.html">Log in</a>
                 </p>
             </div>
         </div>
 
         <center>
-            <div class="card" style="margin-top: 5em; height: 20em; max-width: 20em;">
+            <div class="card" style="margin-top: 5em; height: 30em; max-width: 20em;">
                 <div>
                     <img src="images/logo_no_text.svg" alt="Logo" style="height: 5em;"/>
                 </div>
                 <form>
+                    <input type="name" name="name" required="required" placeholder="First name">
+                    <input type="lastname" name="lastname" required="required" placeholder="Last name">
                     <input type="email" name="email" required="required" placeholder="Email address">
                     <input type="password" name="password" required="required" placeholder="Password">
+                    <input type="password" name="password" required="required" placeholder="Repeat password">
                 </form>
                 <div>
-                    <a class="button" href="send_log_in">
-                        log in
+                    <a class="button" href="send_sign_up">
+                        submit
                     </a>
                 </div>
                 <div>
-                    <a href="forgot_password">
-                        Forgot your password?
+                    <a href="log-in.html">
+                        Already have an account?
                     </a>
                 </div>
             </div>
