@@ -228,7 +228,7 @@ ul.arrow li::before {
 }
 
 .grid>div>img {
-    width: 40%;
+    height: 6em;
     object-fit: scale-down;
 }
 
