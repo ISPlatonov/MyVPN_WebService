@@ -73,6 +73,10 @@ content {
     display: block;
 }
 
+.description {
+    color: var(--description-color);
+}
+
 .smaller {
     font-size: 0.9em;
 }
