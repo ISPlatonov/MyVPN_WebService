@@ -301,7 +301,7 @@ td:last-child {
 }
 
 .slides>div.one {
-    width: 20em;
+    width: 100%;
 }
 
 summary:focus {
