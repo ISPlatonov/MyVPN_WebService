@@ -8,6 +8,19 @@ This is a simple web service to subscribe to my VPN service.
 
 [![](https://img.shields.io/badge/web_page_link-gray?style=for-the-badge)](https://isplatonov.github.io/MyVPN_WebService/)
 
+## Site structure
+
+```mermaid
+graph TB
+    MP[index] --> LM[learn-more]
+    MP --> LI[log-in] --> SU[sign-up]
+    LI --> FP[forgot-password]
+    MP -.-> D[FAQ]
+    MP -.-> E[Contacts]
+    MP -.-> P[Profile]
+    P -.-> Purchase
+```
+
 ## Architecture (*in future*)
 
 ```mermaid

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Hiddy Search - Profile
+{% endblock %}
+
+{% block shortcuts %}
+{% if current_user.is_authenticated %}
+<a class="button" href="log-out">Log out</a>
+{% else %}
+<a class="button" href="log-in">Log in</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<content>
+    <hl>Profile</hl>
+    <content>
+    {% if current_user.is_authenticated %}
+        <p>Name: {{ current_user.name }}</p>
+        <p>Lastname: {{ current_user.lastname }}</p>
+        <p>Email: {{ current_user.email }}</p>
+        <p>Paid until: {{ current_user.date_until_paid }} UTC+0</p>
+    {% else %}
+        <p>Sorry, you need to be logged in to view this page.</p>
+    {% endif %}
+    </content>
+</content>
+{% endblock %}

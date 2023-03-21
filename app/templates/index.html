@@ -1,0 +1,577 @@
+{% extends "base.html" %}
+
+{% block title %}
+Hiddy Search
+{% endblock %}
+
+{% block shortcuts %}
+{% if current_user.is_authenticated %}
+<a class="button" href="profile">Profile</a>
+{% else %}
+<a class="button" href="log-in">Log in</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<content>
+    <hl>
+        Why do you need VPN?
+    </hl>
+    <content>
+        <div class="grid">
+            <div>
+                <img src="static/images/security.svg" alt="security" />
+                <h>
+                    Security
+                </h>
+                <content class="description">
+                    Hiddy Search is based on OpenVPN, which is the most popular and reliable VPN protocol.
+                </content>
+            </div>
+            <div>
+                <img src="static/images/speed.svg" alt="speed" />
+                <h>
+                    Speed and minimal latency
+                </h>
+                <content class="description">
+                    Hiddy Search is located in eastern part of EU, which allows you to get the maximum
+                    speed and minimal latency.
+                </content>
+            </div>
+            <div>
+                <img src="static/images/price.svg" alt="price" />
+                <h>
+                    Price
+                </h>
+                <content class="description">
+                    Hiddy Search is one of the cheapest VPN services on the market.
+                </content>
+            </div>
+            <div>
+                <img src="static/images/privacy.svg" alt="privacy" />
+                <h>
+                    Privacy
+                </h>
+                <content class="description">
+                    Hiddy Search doesn't store any logs, so you can be sure that your data is safe.
+                </content>
+            </div>
+            <div>
+                <img src="static/images/multiplatform.svg" alt="multiplatform" />
+                <h>
+                    Multiplatform
+                </h>
+                <content class="description">
+                    Hiddy Search is available on Windows, Linux, Android and iOS.
+                </content>
+            </div>
+            <div>
+                <img src="static/images/simplicity.svg" alt="simplicity" />
+                <h>
+                    Simplicity
+                </h>
+                <content class="description">
+                    Hiddy Search is easy to use and doesn't require any special skills to install.
+                </content>
+            </div>
+        </div>
+    </content>
+</content>
+
+<content>
+    <hl>
+        Our Services
+    </hl>
+    <content class="grid">
+        <div class="card">
+            <header>
+                1 month
+            </header>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Location
+                        </td>
+                        <td>
+                            Latvia
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cost
+                        </td>
+                        <td>
+                            100 RUB
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a class="button" href="learn-more">
+                    Learn more
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <header>
+                3 month
+            </header>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Location
+                        </td>
+                        <td>
+                            Latvia
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cost
+                        </td>
+                        <td>
+                            250 RUB
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a class="button" href="learn-more">
+                    Learn more
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <header>
+                6 month
+            </header>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Location
+                        </td>
+                        <td>
+                            Latvia
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cost
+                        </td>
+                        <td>
+                            450 RUB
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a class="button" href="learn-more">
+                    Learn more
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <header>
+                1 year
+            </header>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Location
+                        </td>
+                        <td>
+                            Latvia
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cost
+                        </td>
+                        <td>
+                            850 RUB
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a class="button" href="learn-more">
+                    Learn more
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <header>
+                2 years
+            </header>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Location
+                        </td>
+                        <td>
+                            Latvia
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cost
+                        </td>
+                        <td>
+                            1600 RUB
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a class="button" href="learn-more">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </content>
+</content>
+
+<content>
+    <hl>
+        Best offers
+    </hl>
+    <content>
+        <div class="slider">
+            <div class="slides">
+                <div class="card slide">
+                    <header>
+                        1 month
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Location
+                                </td>
+                                <td>
+                                    Latvia
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cost
+                                </td>
+                                <td>
+                                    100 RUB
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <a class="button" href="learn-more">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+                <div class="card slide">
+                    <header>
+                        3 month
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Location
+                                </td>
+                                <td>
+                                    Latvia
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cost
+                                </td>
+                                <td>
+                                    250 RUB
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <a class="button" href="learn-more">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+                <div class="card slide">
+                    <header>
+                        6 month
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Location
+                                </td>
+                                <td>
+                                    Latvia
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cost
+                                </td>
+                                <td>
+                                    450 RUB
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <a class="button" href="learn-more">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+                <div class="card slide">
+                    <header>
+                        1 year
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Location
+                                </td>
+                                <td>
+                                    Latvia
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cost
+                                </td>
+                                <td>
+                                    850 RUB
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <a class="button" href="learn-more">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+                <div class="card slide">
+                    <header>
+                        2 years
+                    </header>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Location
+                                </td>
+                                <td>
+                                    Latvia
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cost
+                                </td>
+                                <td>
+                                    1600 RUB
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <a class="button" href="learn-more">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </content>
+</content>
+
+<content>
+    <hl>
+        Best offers
+    </hl>
+    <content>
+        <center>
+            <div class="slider" >
+                <div class="slides">
+                    <div class="card slide one">
+                        <header>
+                            1 month
+                        </header>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Location
+                                    </td>
+                                    <td>
+                                        Latvia
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cost
+                                    </td>
+                                    <td>
+                                        100 RUB
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <a class="button" href="learn-more">
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card slide one">
+                        <header>
+                            3 month
+                        </header>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Location
+                                    </td>
+                                    <td>
+                                        Latvia
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cost
+                                    </td>
+                                    <td>
+                                        250 RUB
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <a class="button" href="learn-more">
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card slide one">
+                        <header>
+                            6 month
+                        </header>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Location
+                                    </td>
+                                    <td>
+                                        Latvia
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cost
+                                    </td>
+                                    <td>
+                                        450 RUB
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <a class="button" href="learn-more">
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card slide one">
+                        <header>
+                            1 year
+                        </header>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Location
+                                    </td>
+                                    <td>
+                                        Latvia
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cost
+                                    </td>
+                                    <td>
+                                        850 RUB
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <a class="button" href="learn-more">
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card slide one">
+                        <header>
+                            2 years
+                        </header>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Location
+                                    </td>
+                                    <td>
+                                        Latvia
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cost
+                                    </td>
+                                    <td>
+                                        1600 RUB
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <a class="button" href="learn-more">
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </content>
+</content>
+
+<content>
+    <hl>
+        About us
+    </hl>
+    <content style="position:relative;padding-bottom:56.25%;">
+        <p>Something about this service...</p>
+        <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;"
+        frameborder="0" width="100%" height="100%" 
+        allowfullscreen src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+    </content>
+</content>
+{% endblock %}

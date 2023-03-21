@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+Hiddy Search - Log in
+{% endblock %}
+
+{% block shortcuts %}
+{% if current_user.is_authenticated %}
+<a class="button" href="profile">Profile</a>
+{% else %}
+<a class="button" href="sign-up">Sign up</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<center>
+    <div class="card" style="margin-top: 5em; height: 22em; max-width: 20em;">
+        <div>
+            <img src="static/images/logo_no_text.svg" alt="Logo" style="height: 5em;"/>
+        </div>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form id="log-in-form" method="POST" action="/log-in">
+            <input type="email" name="email" required="required" placeholder="Email address">
+            <input type="password" name="password" required="required" placeholder="Password">
+        </form>
+        <div>
+            <a class="button" onclick="document.getElementById('log-in-form').submit()">
+                log in
+            </a>
+        </div>
+        <div>
+            <a href="forgot-password">
+                Forgot your password?
+            </a>
+        </div>
+        <div>
+            <a href="sign-up">
+                Create an account
+            </a>
+        </div>
+    </div>
+</center>
+{% endblock %}

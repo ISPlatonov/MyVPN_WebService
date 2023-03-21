@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Hissy Search - Sign up{% endblock %}
+
+{% block shortcuts %}
+{% if current_user.is_authenticated %}
+<a class="button" href="profile">Profile</a>
+{% else %}
+<a class="button" href="log-in">Log in</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<center>
+    <div class="card" style="margin-top: 5em; height: 30em; max-width: 20em;">
+        <div>
+            <img src="static/images/logo_no_text.svg" alt="Logo" style="height: 5em;"/>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        
+        <form id="sign-up-form" method="POST" action="/sign-up">
+            <input type="name" name="name" required="required" placeholder="First name">
+            <input type="lastname" name="lastname" required="required" placeholder="Last name">
+            <input type="email" name="email" required="required" placeholder="Email address">
+            <input type="password" name="password" required="required" placeholder="Password">
+            <input type="password" name="confirm-password" required="required" placeholder="Repeat password">
+            <div>
+                <a class="button" onclick="document.getElementById('sign-up-form').submit()">
+                    submit
+                </a>
+            </div>
+        </form>
+        <div>
+            <a href="log-in"> 
+                Already have an account?
+            </a>
+        </div>
+    </div>
+</center>
+{% endblock %}
