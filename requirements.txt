@@ -1,0 +1,5 @@
+Flask==2.2.3
+Flask_Login==0.6.2
+flask_sqlalchemy==3.0.3
+openai==0.27.2
+Werkzeug==2.2.2
