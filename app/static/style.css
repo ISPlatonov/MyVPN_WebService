@@ -319,6 +319,19 @@ input {
     background-color: var(--input-background-color);
 }
 
+textarea.chat {
+    border: 1px solid var(--card-border-color);
+    border-radius: .25em;
+    padding: .5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: var(--text-color);
+    font-family: var(--font-family-monospace);
+    background-color: var(--input-background-color);
+    width: 100%;
+    resize: vertical;
+}
+
 center {
     align-content: center;
     justify-content: center;

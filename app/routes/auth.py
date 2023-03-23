@@ -1,11 +1,16 @@
-from flask_login import login_user, logout_user
+from flask_login import login_user, logout_user, current_user
 from flask import Blueprint, render_template, redirect, url_for, request, flash
+import datetime
+import asyncio
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.models import User
 from app import db
+from app.chatting import send_text
 
 
 auth = Blueprint('auth', __name__)
+
+chat_list = [{'name': 'bot', 'message': 'Hi, how can I help you?'}]
 
 
 @auth.route('/log-in')
@@ -64,13 +69,13 @@ def sign_up_post():
     new_user = User(email=email,
                     name=name,
                     lastname=lastname,
-                    date_until_paid=
+                    date_until_paid=datetime.datetime.now(),
                     password=generate_password_hash(password, method='sha256'))
 
     # add the new user to the database
     db.session.add(new_user)
     db.session.commit()
-    return redirect(url_for('auth.profile'))
+    return redirect(url_for('routes.profile'))
 
 
 @auth.route('/forgot-password')
@@ -87,3 +92,17 @@ def log_out():
 @auth.route('/order')
 def order():
     return render_template('order.html')
+
+
+@auth.route('/chat')
+def chat():
+    return render_template('chat.html', chat=chat_list)
+
+
+@auth.route('/chat', methods=['POST'])
+def chat_post():
+    message = request.form.get('message')
+    chat_list.append({'name': current_user.name, 'message': message})
+    responce = send_text(message)
+    chat_list.append({'name': 'bot', 'message': responce})
+    return render_template('chat.html', chat=chat_list)

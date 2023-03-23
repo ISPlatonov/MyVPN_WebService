@@ -21,6 +21,7 @@ Hiddy Search - Profile
         <p>Lastname: {{ current_user.lastname }}</p>
         <p>Email: {{ current_user.email }}</p>
         <p>Paid until: {{ current_user.date_until_paid }} UTC+0</p>
+        <p><a class="button" href="chat">Chat</a></p>
     {% else %}
         <p>Sorry, you need to be logged in to view this page.</p>
     {% endif %}

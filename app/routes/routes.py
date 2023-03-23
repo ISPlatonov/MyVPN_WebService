@@ -28,3 +28,8 @@ def profile():
 def order():
     flash('You have to log in to order')
     return redirect(url_for('auth.log_in'), next=url_for('auth.order'))
+
+@routes.route('/chat')
+def chat():
+    flash('You have to log in to chat')
+    return redirect(url_for('auth.log_in'), next=url_for('auth.chat'))
